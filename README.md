@@ -30,11 +30,14 @@ dependencies {
 ```
 
 ###Step 3 Press Sync now – verify no errors 
+![build.gradle](build_gradle.png)
 
 ###Step 4 Update AndroidManifest.xml file
 add user permissions to the internet 
 
 ``<uses-permission android:name="android.permission.INTERNET" />``
+
+![AndroidManifest.xml](manifest.png)
 
 ###Step 5 Update MainActivity.java
 Firebase Android Context code, if it doesn’t include the import firebase code add that as well 
@@ -43,6 +46,8 @@ Firebase Android Context code, if it doesn’t include the import firebase code 
 
 (maybe)
 ``import com.firebase.client.Firebase;``
+
+![MainActivity.java](main_activity_java.png)
 
 ###Step 6	Run the app to verify no errors
 ###Step 7	Create Firebase Account at firebase.com 
@@ -54,6 +59,8 @@ a.	Add variable:
 b.	Add assignment to your database inside onCreate method: REPLACE hudsonvalleygdg with the name of your database.
 
 ``mRef = new Firebase("https://hudsonvalleygdg.firebaseio.com");``
+
+![MainActivity.java](main_activity_java_2.png)
 
 ###Step 9 Replace activity_main.xml code:
 ```
@@ -222,6 +229,8 @@ b.	Add assignment to your database inside onCreate method: REPLACE hudsonvalleyg
 ```
 
 Should look like:
+
+![activity_main.xml](activity_main_xml.png)
 
 ###Step 11 Add empty button methods to the MainActivity class.
 ```
