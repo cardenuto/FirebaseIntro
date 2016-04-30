@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/heading_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set Child" />
+
+        <EditText
+            android:id="@+id/edit_child"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading_text"
+            android:hint="Child" />
+
+        <Button
+            android:id="@+id/button_child"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/edit_child"
+            android:layout_alignRight="@+id/edit_child"
+            android:layout_below="@+id/edit_child"
+            android:text="Update Child"
+            android:onClick="clickChild"/>
+
+        <Button
+            android:id="@+id/button_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_child"
+            android:layout_toLeftOf="@+id/button_child"
+            android:layout_toStartOf="@+id/button_child"
+            android:text="Parent"
+            android:onClick="clickParent"/>
+
+        <TextView
+            android:id="@+id/heading_ref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_child"
+            android:text="Current Reference" />
+
+        <TextView
+            android:id="@+id/text_reference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading_ref"
+            />
+
+        <TextView
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/text_reference"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#111111" />
+
+        <TextView
+            android:id="@+id/heading_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:text="Add data" />
+
+        <EditText
+            android:id="@+id/edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/heading_add"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/edit_food"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_name"
+            android:hint="Food" />
+
+        <EditText
+            android:id="@+id/edit_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_food"
+            android:hint="Color" />
+
+        <LinearLayout
+            android:id="@+id/layout_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit_color"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_set"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="setValue name"
+                android:onClick="clickSetName"/>
+
+            <Button
+                android:id="@+id/button_set3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="setvalue all 3"
+                android:onClick="clickSet3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_set"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_update"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="update food"
+                android:onClick="clickUpdateFood"/>
+
+            <Button
+                android:id="@+id/button_update3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="update all 3"
+                android:onClick="clickUpdate3"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/heading_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_update"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Results" />
+        <TextView
+            android:id="@+id/text_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/heading_results"
+            />
+    </RelativeLayout>
+</ScrollView>
